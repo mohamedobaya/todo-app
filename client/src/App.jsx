@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useEffect, useState } from "react"
 import TodoList from "./components/TodoList"
 import useWindowSize from "./components/useWindowSize"
-const baseUrl = 'https://todo-app-mohamedobaya.herokuapp.com/'||'http://localhost:8080'
+const baseUrl = 'https://todo-app-mohamedobaya.herokuapp.com/'
 
 const App = () => {
   const [ theme, setTheme ] = useState(true) // true --> dark, false --> light 

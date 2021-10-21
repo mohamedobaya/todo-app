@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(cors())
 
 mongoose
-.connect(process.env.MONGODB_URI || "mongodb+srv://todoList:todoList@todocluster.yzgvp.mongodb.net/todo-database?retryWrites=true&w=majority",
+.connect("mongodb+srv://todoList:todoList@todocluster.yzgvp.mongodb.net/todo-database?retryWrites=true&w=majority",
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
