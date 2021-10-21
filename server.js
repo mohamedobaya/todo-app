@@ -76,4 +76,9 @@ app.put('/todo/complete/:id', async (req, res) => {
 
 const PORT = process.env.PORT || 8080
 
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('client/build'))
+}
+
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
