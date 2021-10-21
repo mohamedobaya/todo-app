@@ -1,0 +1,79 @@
+.todos{
+    width: 90%;
+    @media (min-width: 768px) {
+        width: 60%;
+    }
+    margin: auto;
+    margin-top: -2.5em;
+    border: none;
+    border-radius: 0.75em;
+    &-dark{
+        background-color: $very-dark-desaturated-blue;
+    }
+    &-light{
+        background-color: white;
+    }
+    &-todo{
+        padding: 1.2em 0.7em;
+        display: flex;
+        justify-content: space-between;
+        &-container{
+            display: flex;
+            align-items: center;
+            &-text{
+                cursor: pointer;
+                
+                word-break: break-word;
+                &-dark{
+                    color: $light-grayish-blue;
+                    &-done{
+                        color:  $dark-grayish-blue;
+                        text-decoration: line-through;
+                    }
+
+                }
+                &-light{
+                    color: $very-dark-blue;
+                    &-done{
+                        color: $light-grayish-blue;
+                        text-decoration: line-through;
+                    }
+                }
+                
+            }
+        }
+        &-delete{
+            cursor: pointer;
+            display: inline-block;
+            padding-right: 0 0.5em;
+        }
+        
+        
+    }
+    &-details{
+        &-dark{
+            color: $dark-grayish-blue;
+            .todos-details-clear:hover{
+                color: $light-grayish-blue;
+            }
+        }
+        &-light{
+            color: $light-grayish-blue;
+            .todos-details-clear:hover{
+                color: $very-dark-blue;
+            }
+        }
+        padding: 1em 1.5em;
+        display: flex;
+        justify-content: space-between;
+        &-clear{
+            cursor: pointer;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+        }
+    }
+}

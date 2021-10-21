@@ -1,0 +1,62 @@
+@import './Colors.scss';
+
+.header-add-todo{
+    // width: 40%;
+    // margin: auto;
+    // display: flex;
+    // justify-content: space-between;
+    // @media (max-width: 65.3125em) {
+    //     width: 80%;
+    // }
+    // @media (max-width: 23.4375em) {
+    //     width: 90%;
+    // }
+    width: 90%;
+    @media (min-width: 768px) {
+        width: 60%;
+    }
+    margin: auto;
+    &-container{
+        width: 100%;
+        padding: 1.2em 0.7em;
+        border: none;
+        display: flex;
+        border-radius: 0.75em;
+        &-dark{
+            background-color: $very-dark-desaturated-blue;
+        }
+        &-light{
+            background-color: white;
+        }
+        &-input{
+            background: transparent;
+            border: none;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1em;
+            &-dark{
+                color: $light-grayish-blue;
+            }
+            &-light{
+                color: $very-dark-blue;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        
+    }
+    // &-btn{
+    //     width: 20%;
+    //     border: none;
+    //     border-radius: 0.75em;
+    //     color: whitesmoke;
+    //     background-color: #1DA1F2;
+    //     box-shadow: 0px 2px 6px rgba(127, 177, 243, 0.4);
+    //     &:hover{
+    //         opacity: 0.8;
+    //     }
+    //     &:focus{
+    //         outline: none;
+    //     }
+    // }
+}

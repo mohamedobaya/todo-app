@@ -1,0 +1,81 @@
+@import './Colors.scss';
+.showcase{
+    &-dark{
+        color: $dark-grayish-blue;
+        .showcase-status-item:hover{
+            color: $light-grayish-blue;
+        }
+    }
+    &-light{
+        color: $light-grayish-blue;
+        .showcase-status-item:hover{
+            color: $very-dark-blue;
+        }
+    }
+    &-status{
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        &-item{
+            padding: 0 1em;
+            cursor: pointer;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+
+            &-selected{
+                color: #385AAE;
+            }
+            
+        }
+    }
+    &-mobile{
+        width: 90%;
+        @media (min-width: 768px) {
+            width: 60%;
+        }
+        margin: 1em auto;
+        border: none;
+        border-radius: 0.75em;
+        
+        &-dark{
+            background-color: $very-dark-desaturated-blue;
+            color: $dark-grayish-blue;
+            .showcase-mobile-status-item:hover{
+                color: $light-grayish-blue;
+            }
+        }
+        &-light{
+            background-color: white;
+            color: $light-grayish-blue;
+            .showcase-mobile-status-item:hover{
+                color: $very-dark-blue;
+            }
+        }
+        &-status{
+            padding: 1.2em 1.4em;
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            &-item{
+                cursor: pointer;
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                -khtml-user-select: none; /* Konqueror HTML */
+                -moz-user-select: none; /* Old versions of Firefox */
+                -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none;
+
+                &-selected{
+                    color: #385AAE;
+                }
+                &:hover{
+                    color: #385AAE;
+                }
+            }
+        }
+    }
+}
