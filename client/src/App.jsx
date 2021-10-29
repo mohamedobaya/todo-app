@@ -71,7 +71,8 @@ const App = () => {
     console.log(newComplete, e.target.value);
     setNewTodo(e.target.value)
   }
-  const createTodo = () => {
+  const createTodo = e => {
+    e.preventDefault()
     axios
     .post(`${baseUrl}/todo/new`, {
       text: newTodo,
@@ -80,6 +81,8 @@ const App = () => {
     .then(res => {
       getTodos()
     });
+    setNewTodo('')
+    setNewComplete(false)
   }
   // delete funcs //
   const deleteItem = id => {
